@@ -1,14 +1,9 @@
 # Set the base image to Ubuntu
-FROM    ubuntu
+FROM    daocloud.io/node:0.10-onbuild
 
 # File Author / Maintainer
-MAINTAINER Anand Mani Sankar
+MAINTAINER Jay Poon
 
-# Install Node.js and other dependencies
-RUN apt-get update && \
-    apt-get -y install curl && \
-    curl -sL https://deb.nodesource.com/setup | sudo bash - && \
-    apt-get -y install python build-essential nodejs
 
 # Install nodemon
 RUN npm install -g nodemon
